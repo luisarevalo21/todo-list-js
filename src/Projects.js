@@ -1,9 +1,10 @@
 export default class Projects {
-  constructor(name) {
-    this.name = name;
+  constructor(title, description = "") {
+    this.title = title;
     this.selected = false;
     this.icon = null;
     this.value = 0;
+    this.description = description;
   }
 
   toggleSelected() {

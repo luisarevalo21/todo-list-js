@@ -1,7 +1,7 @@
 export default class Modal {
-  constructor() {
+  constructor(modal) {
     this.show = false;
-    this.modal = document.getElementById("modal");
+    this.modal = document.getElementById(modal);
     this.overlay = document.getElementById("overlay");
   }
 
@@ -16,13 +16,13 @@ export default class Modal {
 
   hideModal() {
     this.show = false;
-    this.modal.classList.toggle("active-modal");
+    this.modal.classList.remove("active-modal");
     this.overlay.classList.remove("active-overlay");
   }
 
   showModal() {
     this.show = true;
-    this.modal.classList.toggle("active-modal");
+    this.modal.classList.add("active-modal");
     this.overlay.classList.add("active-overlay");
   }
 }

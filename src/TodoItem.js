@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 
 export default class TodoItem {
-  constructor(title, description, dueDate, priority, notes) {
+  constructor(title, description, dueDate, priority, notes, id = uuidv4()) {
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
@@ -9,7 +9,7 @@ export default class TodoItem {
     this.notes = notes;
     this.completed = false;
     this.showNotes = false;
-    this.id = uuidv4();
+    this.id = id;
   }
 
   toggleCompleted() {

@@ -123,8 +123,9 @@ main {
   grid-row: 1;
   justify-content: center;
   align-self: center;
-  border: 1px solid red;
-  font-size: 2rem;
+  /* border: 1px solid red; */
+  font-size: 2.2rem;
+  margin-left: 0.5em;
 }
 
 .no-tasks {
@@ -180,7 +181,9 @@ main {
 .form-title {
   margin: 0.5em 0;
 }
-form {
+
+form,
+.todo__description__container {
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -188,6 +191,13 @@ form {
   border-radius: 5px;
   padding: 2em;
   font-size: 1.3rem;
+}
+
+.todo__task__title,
+.todo__task__description,
+.todo__task__date,
+.todo__task__priority {
+  margin: 0.5em 0;
 }
 form input,
 form select {
@@ -222,7 +232,7 @@ form select {
   color: var(--white-smoke);
   background-color: rgb(41, 78, 151);
 }
-.btn-container button {
+.btn-container {
   width: 300px;
   color: #000;
   padding: 0.5em 0;
@@ -244,4 +254,13 @@ form select {
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+}
+.add {
+  background: rgb(40, 184, 40);
+}
+
+.edit {
+  margin-left: auto;
+  cursor: pointer;
+  margin-right: 0.5em;
 }
